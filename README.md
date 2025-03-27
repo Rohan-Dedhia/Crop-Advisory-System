@@ -60,6 +60,9 @@ POST /recommend_crop: Accepts JSON input with soil type, water availability, and
 ### **👥 Contributors**
 
 Rohan Dedhia 
+
 Kunaal Kotak
-Arnav Jha 
+
+Arnav Jha
+
 Divyam Agarwal
