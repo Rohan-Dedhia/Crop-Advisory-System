@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Crop Advisory System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            width: 90%;
+            max-width: 550px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        select, input, button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #27ae60;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #219653;
+        }
+
+        .recommendations {
+            background: #e8f5e9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: none;
+            text-align: left;
+        }
+
+        .recommendations h3 {
+            color: #27ae60;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: #ffffff;
+            padding: 15px;
+            margin: 8px 0;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            line-height: 1.6;
+        }
+
+        .soil-type-info, .ph-info {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .error {
+            color: #c0392b;
+            background: #fce4e4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Smart Crop Advisory System</h1>
+
+        <label for="language">🌍 Select Language:</label>
+        <select id="language" onchange="translatePage()">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+            <option value="bn">বাংলা</option>
+            <option value="te">తెలుగు</option>
+            <option value="mr">मराठी</option>
+        </select>
+
+        <form id="recommendForm">
+            <label id="labelSoilType">Soil Type:</label>
+            <select id="soilType" required>
+                <option value="" disabled selected>Select a soil type</option>
+                <option value="0">General Soil</option>
+                <option value="1">Sandy Soil</option>
+                <option value="2">Clay Soil</option>
+                <option value="3">Silty Soil</option>
+                <option value="4">Loamy Soil</option>
+                <option value="5">Peaty Soil</option>
+                <option value="6">Saline Soil</option>
+            </select>
+            <div class="soil-type-info" id="soilTypeInfo"></div>
+
+            <label id="labelWaterAvailable">Water Availability (mm):</label>
+            <input type="number" id="waterAvailable" min="0" placeholder="Enter water availability" required>
+
+            <label id="labelSoilPh">Soil pH:</label>
+            <input type="number" step="0.1" id="soilPh" min="0" max="14" placeholder="Enter soil pH level" required>
+            <div class="ph-info" id="phLevelInfo"></div>
+
+            <button type="submit" id="submitBtn">Get Recommendations</button>
+        </form>
+
+        <div id="recommendations" class="recommendations"></div>
+    </div>
+
+    <script>
+        const soilTypeDescriptions = {
+            0: "General Soil: Suitable for a variety of crops.",
+            1: "Sandy Soil: Good drainage, suitable for drought-resistant crops.",
+            2: "Clay Soil: Retains moisture, suitable for moisture-loving crops.",
+            3: "Silty Soil: Fertile and good for a variety of crops.",
+            4: "Loamy Soil: Ideal for most crops, well-balanced.",
+            5: "Peaty Soil: Moisture-rich, suitable for specific crops.",
+            6: "Saline Soil: Suitable for salt-tolerant crops."
+        };
+
+        const phLevelInfo = {
+            en: "pH levels between 6.0 and 7.0 are ideal for most crops.",
+            hi: "6.0 से 7.0 के बीच pH स्तर अधिकांश फसलों के लिए आदर्श हैं।",
+            bn: "6.0 থেকে 7.0 এর মধ্যে pH স্তর বেশিরভাগ ফসলের জন্য আদর্শ।",
+            te: "6.0 నుండి 7.0 మధ్య pH స్థాయి చాలా పంటలకు అనుకూలం.",
+            mr: "6.0 ते 7.0 दरम्यान pH स्तर बहुतेक पिकांसाठी आदर्श आहे."
+        };
+
+        const soilTypeTranslations = {
+            en: ["General Soil", "Sandy Soil", "Clay Soil", "Silty Soil", "Loamy Soil", "Peaty Soil", "Saline Soil"],
+            hi: ["सामान्य मिट्टी", "रेतीली मिट्टी", "चिकनी मिट्टी", "गाद मिट्टी", "दोमट मिट्टी", "पीट मिट्टी", "नमकीन मिट्टी"],
+            bn: ["সাধারণ মাটি", "বালুকাময় মাটি", "কাদামাটি", "পলিমাটি", "দোআঁশ মাটি", "পিট মাটি", "লবণাক্ত মাটি"],
+            te: ["సాధారణ మట్టి", "ఇసుక మట్టి", "బంకమట్టి", "పంకమట్టి", "లోమీ మట్టి", "పీట్ మట్టి", "ఉప్పు మట్టి"],
+            mr: ["सामान्य माती", "वाळूची माती", "चिकणमाती", "गाळाची माती", "दोमट माती", "पीट माती", "खारट माती"]
+        };
+
+        const translations = {
+            en: { title: "Smart Crop Advisory System", labelSoilType: "Soil Type:", soilTypePlaceholder: "Select a soil type", labelWaterAvailable: "Water Availability (mm):", waterAvailablePlaceholder: "Enter water availability", labelSoilPh: "Soil pH:", soilPhPlaceholder: "Enter soil pH level", submitBtn: "Get Recommendations" },
+            hi: { title: "स्मार्ट फसल सलाह प्रणाली", labelSoilType: "मिट्टी का प्रकार:", soilTypePlaceholder: "मिट्टी का प्रकार चुनें", labelWaterAvailable: "पानी की उपलब्धता (मिमी):", waterAvailablePlaceholder: "पानी की उपलब्धता दर्ज करें", labelSoilPh: "मिट्टी का pH:", soilPhPlaceholder: "मिट्टी का pH स्तर दर्ज करें", submitBtn: "सिफारिशें प्राप्त करें" },
+            bn: { title: "স্মার্ট ফসল পরামর্শ ব্যবস্থা", labelSoilType: "মাটির ধরন:", soilTypePlaceholder: "মাটির ধরন নির্বাচন করুন", labelWaterAvailable: "জলের প্রাপ্যতা (মিমি):", waterAvailablePlaceholder: "জলের প্রাপ্যতা লিখুন", labelSoilPh: "মাটির pH:", soilPhPlaceholder: "মাটির pH স্তর লিখুন", submitBtn: "সুপারিশ পান" },
+            te: { title: "స్మార్ట్ పంట సలహా వ్యవస్థ", labelSoilType: "మట్టి రకం:", soilTypePlaceholder: "మట్టి రకం ఎంచుకోండి", labelWaterAvailable: "నీటి అందుబాటు (మి.మీ):", waterAvailablePlaceholder: "నీటి అందుబాటు నమోదు చేయండి", labelSoilPh: "మట్టి pH:", soilPhPlaceholder: "మట్టి pH స్థాయి నమోదు చేయండి", submitBtn: "సిఫార్సులు పొందండి" },
+            mr: { title: "स्मार्ट पीक सल्ला प्रणाली", labelSoilType: "मातीचा प्रकार:", soilTypePlaceholder: "मातीचा प्रकार निवडा", labelWaterAvailable: "पाण्याची उपलब्धता (मिमी):", waterAvailablePlaceholder: "पाण्याची उपलब्धता प्रविष्ट करा", labelSoilPh: "मातीचा pH:", soilPhPlaceholder: "मातीचा pH स्तर प्रविष्ट करा", submitBtn: "शिफारसी मिळवा" }
+        };
+
+        document.getElementById("soilType").addEventListener("change", function() {
+            const soilType = this.value;
+            document.getElementById("soilTypeInfo").innerText = soilTypeDescriptions[soilType] || "";
+        });
+
+        document.getElementById("soilPh").addEventListener("focus", function() {
+            const selectedLang = document.getElementById("language").value;
+            document.getElementById("phLevelInfo").innerText = phLevelInfo[selectedLang];
+        });
+
+        document.getElementById("recommendForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            const soilType = parseInt(document.getElementById("soilType").value);
+            const waterAvailable = parseInt(document.getElementById("waterAvailable").value);
+            const soilPh = parseFloat(document.getElementById("soilPh").value);
+
+            if (isNaN(soilType) || waterAvailable < 0 || soilPh < 0 || soilPh > 14) {
+                document.getElementById("recommendations").innerHTML = `<h3 class="error">Please enter valid values: Select a soil type, Water (≥0), pH (0-14).</h3>`;
+                document.getElementById("recommendations").style.display = "block";
+                return;
+            }
+
+            const requestData = { soil_type: soilType, water_available: waterAvailable, soil_ph: soilPh };
+
+            try {
+                const response = await fetch('http://127.0.0.1:5000/recommend_crop', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(requestData)
+                });
+
+                const result = await response.json();
+                const resultDiv = document.getElementById("recommendations");
+                resultDiv.style.display = "block";
+
+                if (response.ok) {
+                    if (result.recommended_crops && result.recommended_crops.length > 0) {
+                        const uniqueCrops = new Map();
+                        result.recommended_crops.forEach(crop => {
+                            if (!uniqueCrops.has(crop.Crop)) {
+                                uniqueCrops.set(crop.Crop, {
+                                    fertilizer: crop.Recommended_Fertilizer,
+                                    water: crop.Water_Requirement_mm,
+                                    yield: crop.Yield_per_Acre_Qtl,
+                                    harvest: crop.Best_Harvest_Time
+                                });
+                            }
+                        });
+
+                        resultDiv.innerHTML = `
+                            <h3>🌱 Recommended Crops:</h3>
+                            <ul>${Array.from(uniqueCrops).map(([cropName, details]) => `
+                                <li>
+                                    <strong>${cropName}</strong><br>
+                                    Fertilizer: ${details.fertilizer}<br>
+                                    Water Needed: ${details.water} mm<br>
+                                    Expected Yield: ${details.yield} Quintal/Acre<br>
+                                    Best Harvest: Month ${details.harvest}
+                                </li>
+                            `).join('')}</ul>`;
+                    } else {
+                        resultDiv.innerHTML = `<h3>🌱 ${result.message || 'No suitable crops found.'}</h3>`;
+                    }
+                } else {
+                    resultDiv.innerHTML = `<h3 class="error">🌱 Error: ${result.error || 'Something went wrong.'}</h3>`;
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById("recommendations").innerHTML = `<h3 class="error">🌱 An error occurred. Please try again.</h3>`;
+                document.getElementById("recommendations").style.display = "block";
+            }
+        });
+
+        function translatePage() {
+            const selectedLang = document.getElementById("language").value;
+            const t = translations[selectedLang];
+            const soilTypes = soilTypeTranslations[selectedLang];
+
+            document.getElementById("title").innerText = t.title;
+            document.getElementById("labelSoilType").innerText = t.labelSoilType;
+            document.getElementById("labelWaterAvailable").innerText = t.labelWaterAvailable;
+            document.getElementById("waterAvailable").placeholder = t.waterAvailablePlaceholder;
+            document.getElementById("labelSoilPh").innerText = t.labelSoilPh;
+            document.getElementById("soilPh").placeholder = t.soilPhPlaceholder;
+            document.getElementById("submitBtn").innerText = t.submitBtn;
+            document.getElementById("phLevelInfo").innerText = phLevelInfo[selectedLang];
+
+            // Update soil type dropdown options
+            const soilTypeSelect = document.getElementById("soilType");
+            const selectedValue = soilTypeSelect.value;
+            soilTypeSelect.innerHTML = `<option value="" disabled ${!selectedValue ? 'selected' : ''}>${t.soilTypePlaceholder}</option>`;
+            for (let i = 0; i < soilTypes.length; i++) {
+                soilTypeSelect.innerHTML += `<option value="${i}" ${i == selectedValue ? 'selected' : ''}>${soilTypes[i]}</option>`;
+            }
+            document.getElementById("soilTypeInfo").innerText = soilTypeDescriptions[selectedValue] || "";
+        }
+
+        // Initial translation
+        translatePage();
+    </script>
+</body>
+</html>

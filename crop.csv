@@ -1,0 +1,251 @@
+Crop,Soil_Type,Water_Requirement_mm,Yield_per_Acre_Qtl,Best_Harvest_Time,Recommended_Fertilizer,pH_Avg
+Wheat,4,437,30,7,NPK (20-20-20),7.03
+Wheat,4,454,30,7,NPK (20-20-20),6.55
+Wheat,4,441,30,7,NPK (20-20-20),6.56
+Wheat,4,441,30,7,NPK (20-20-20),6.52
+Wheat,4,450,30,7,NPK (20-20-20),6.52
+Rice,2,1187,25,10,Ammonium Sulfate,6.06
+Rice,2,1187,25,10,Ammonium Sulfate,5.87
+Rice,2,1187,25,10,Ammonium Sulfate,6.3
+Rice,2,1199,25,10,Ammonium Sulfate,5.92
+Rice,2,1194,25,10,Ammonium Sulfate,5.75
+Sugarcane,5,1582,50,2,Superphosphate,6.69
+Sugarcane,5,1590,50,2,Superphosphate,6.92
+Sugarcane,5,1594,50,2,Superphosphate,6.46
+Sugarcane,5,1607,50,2,Superphosphate,6.46
+Sugarcane,5,1601,50,2,Superphosphate,7.05
+Maize,4,592,22,1,Urea,6.43
+Maize,4,613,22,1,Urea,6.51
+Maize,4,588,22,1,Urea,6.21
+Maize,4,585,22,1,Urea,6.47
+Maize,4,581,22,1,Urea,6.18
+Pulses,5,419,10,3,Potash,6.55
+Pulses,5,380,10,3,Potash,6.99
+Pulses,5,419,10,3,Potash,6.7
+Pulses,5,419,10,3,Potash,6.61
+Pulses,5,389,10,3,Potash,6.65
+Mustard,4,305,15,4,Calcium Nitrate,6.72
+Mustard,4,284,15,4,Calcium Nitrate,6.79
+Mustard,4,290,15,4,Calcium Nitrate,6.99
+Mustard,4,316,15,4,Calcium Nitrate,6.78
+Mustard,4,283,15,4,Calcium Nitrate,6.86
+Barley,6,343,28,7,NPK (15-15-15),6.61
+Barley,6,339,28,7,NPK (15-15-15),6.54
+Barley,6,335,28,7,NPK (15-15-15),6.53
+Barley,6,337,28,7,NPK (15-15-15),6.66
+Barley,6,351,28,7,NPK (15-15-15),6.36
+Cotton,1,714,20,11,Potassium Sulfate,5.71
+Cotton,1,710,20,11,Potassium Sulfate,5.76
+Cotton,1,684,20,11,Potassium Sulfate,5.98
+Cotton,1,704,20,11,Potassium Sulfate,6.04
+Cotton,1,704,20,11,Potassium Sulfate,5.78
+Soybean,3,498,18,9,Magnesium Sulfate,6.28
+Soybean,3,483,18,9,Magnesium Sulfate,6.2
+Soybean,3,493,18,9,Magnesium Sulfate,6.62
+Soybean,3,502,18,9,Magnesium Sulfate,6.26
+Soybean,3,495,18,9,Magnesium Sulfate,6.59
+Groundnut,6,467,22,10,Potash,6.5
+Groundnut,6,469,22,10,Potash,6.51
+Groundnut,6,430,22,10,Potash,6.5
+Groundnut,6,466,22,10,Potash,6.03
+Groundnut,6,455,22,10,Potash,6.21
+Tomato,4,596,40,8,Iron Chelate,5.94
+Tomato,4,598,40,8,Iron Chelate,6.0
+Tomato,4,596,40,8,Iron Chelate,6.04
+Tomato,4,604,40,8,Iron Chelate,6.27
+Tomato,4,620,40,8,Iron Chelate,6.1
+Potato,5,516,45,0,Rock Phosphate,5.3
+Potato,5,499,45,0,Rock Phosphate,5.57
+Potato,5,516,45,0,Rock Phosphate,5.6
+Potato,5,494,45,0,Rock Phosphate,5.41
+Potato,5,500,45,0,Rock Phosphate,5.49
+Onion,4,540,35,6,Micronutrient Mix,7.02
+Onion,4,565,35,6,Micronutrient Mix,6.84
+Onion,4,531,35,6,Micronutrient Mix,6.72
+Onion,4,564,35,6,Micronutrient Mix,6.74
+Onion,4,534,35,6,Micronutrient Mix,6.69
+Garlic,4,419,30,8,Compost,6.86
+Garlic,4,392,30,8,Compost,6.51
+Garlic,4,381,30,8,Compost,7.03
+Garlic,4,387,30,8,Compost,6.46
+Garlic,4,399,30,8,Compost,6.46
+Chili,6,435,25,5,Superphosphate,6.3
+Chili,6,459,25,5,Superphosphate,6.45
+Chili,6,466,25,5,Superphosphate,6.23
+Chili,6,439,25,5,Superphosphate,6.26
+Chili,6,447,25,5,Superphosphate,6.32
+Pea,2,336,20,3,DAP (Diammonium Phosphate),6.88
+Pea,2,352,20,3,DAP (Diammonium Phosphate),6.89
+Pea,2,352,20,3,DAP (Diammonium Phosphate),6.86
+Pea,2,338,20,3,DAP (Diammonium Phosphate),6.86
+Pea,2,332,20,3,DAP (Diammonium Phosphate),6.73
+Lentil,4,339,18,7,Biofertilizer,6.98
+Lentil,4,304,18,7,Biofertilizer,6.97
+Lentil,4,332,18,7,Biofertilizer,6.53
+Lentil,4,324,18,7,Biofertilizer,6.59
+Lentil,4,315,18,7,Biofertilizer,6.72
+Banana,0,1207,100,11,Zinc Sulfate,6.27
+Banana,0,1215,100,11,Zinc Sulfate,6.2
+Banana,0,1195,100,11,Zinc Sulfate,6.49
+Banana,0,1211,100,11,Zinc Sulfate,6.46
+Banana,0,1206,100,11,Zinc Sulfate,6.39
+Mango,0,1086,120,5,Boron,6.85
+Mango,0,1105,120,5,Boron,6.82
+Mango,0,1114,120,5,Boron,6.84
+Mango,0,1107,120,5,Boron,6.79
+Mango,0,1092,120,5,Boron,6.91
+Guava,0,990,80,1,Organic Manure,6.94
+Guava,0,1005,80,1,Organic Manure,6.93
+Guava,0,1020,80,1,Organic Manure,6.92
+Guava,0,1012,80,1,Organic Manure,6.82
+Guava,0,986,80,1,Organic Manure,6.65
+Papaya,4,901,90,6,Manganese Sulfate,5.85
+Papaya,4,906,90,6,Manganese Sulfate,5.96
+Papaya,4,916,90,6,Manganese Sulfate,6.06
+Papaya,4,886,90,6,Manganese Sulfate,6.14
+Papaya,4,898,90,6,Manganese Sulfate,5.86
+Pomegranate,4,851,70,9,Micronutrient Mix,6.33
+Pomegranate,4,870,70,9,Micronutrient Mix,6.55
+Pomegranate,4,859,70,9,Micronutrient Mix,6.54
+Pomegranate,4,848,70,9,Micronutrient Mix,6.4
+Pomegranate,4,865,70,9,Micronutrient Mix,6.51
+Brinjal,4,745,65,1,Boron,6.85
+Brinjal,4,760,65,1,Boron,6.68
+Brinjal,4,750,65,1,Boron,6.96
+Brinjal,4,760,65,1,Boron,6.56
+Brinjal,4,757,65,1,Boron,6.93
+Carrot,6,704,55,2,Compost,6.22
+Carrot,6,682,55,2,Compost,5.94
+Carrot,6,696,55,2,Compost,6.26
+Carrot,6,692,55,2,Compost,6.28
+Carrot,6,680,55,2,Compost,5.76
+Cabbage,3,659,50,4,NPK (15-15-15),6.2
+Cabbage,3,662,50,4,NPK (15-15-15),6.61
+Cabbage,3,653,50,4,NPK (15-15-15),6.42
+Cabbage,3,647,50,4,NPK (15-15-15),6.46
+Cabbage,3,668,50,4,NPK (15-15-15),6.6
+Cauliflower,5,597,45,3,Gypsum,5.92
+Cauliflower,5,620,45,3,Gypsum,6.29
+Cauliflower,5,585,45,3,Gypsum,5.93
+Cauliflower,5,599,45,3,Gypsum,5.92
+Cauliflower,5,580,45,3,Gypsum,5.72
+Spinach,4,480,40,7,Iron Chelate,7.02
+Spinach,4,509,40,7,Iron Chelate,6.48
+Spinach,4,500,40,7,Iron Chelate,6.9
+Spinach,4,489,40,7,Iron Chelate,6.77
+Spinach,4,494,40,7,Iron Chelate,6.79
+Radish,6,474,38,0,Gypsum,6.83
+Radish,6,493,38,0,Gypsum,6.9
+Radish,6,500,38,0,Gypsum,6.67
+Radish,6,473,38,0,Gypsum,6.65
+Radish,6,465,38,0,Gypsum,6.77
+Turnip,5,463,36,8,Superphosphate,6.2
+Turnip,5,477,36,8,Superphosphate,6.21
+Turnip,5,469,36,8,Superphosphate,6.53
+Turnip,5,478,36,8,Superphosphate,6.33
+Turnip,5,478,36,8,Superphosphate,6.13
+Bitter Gourd,5,443,34,6,Urea,6.29
+Bitter Gourd,5,462,34,6,Urea,6.31
+Bitter Gourd,5,460,34,6,Urea,6.03
+Bitter Gourd,5,451,34,6,Urea,6.52
+Bitter Gourd,5,462,34,6,Urea,6.53
+Bottle Gourd,6,423,32,5,Biofertilizer,6.44
+Bottle Gourd,6,412,32,5,Biofertilizer,6.58
+Bottle Gourd,6,411,32,5,Biofertilizer,6.56
+Bottle Gourd,6,426,32,5,Biofertilizer,6.71
+Bottle Gourd,6,445,32,5,Biofertilizer,6.22
+Pumpkin,5,408,30,1,Fish Emulsion,6.3
+Pumpkin,5,389,30,1,Fish Emulsion,6.56
+Pumpkin,5,386,30,1,Fish Emulsion,6.47
+Pumpkin,5,409,30,1,Fish Emulsion,6.77
+Pumpkin,5,409,30,1,Fish Emulsion,6.36
+Watermelon,5,388,28,11,Potassium Sulfate,6.98
+Watermelon,5,401,28,11,Potassium Sulfate,6.74
+Watermelon,5,391,28,11,Potassium Sulfate,6.93
+Watermelon,5,394,28,11,Potassium Sulfate,6.97
+Watermelon,5,410,28,11,Potassium Sulfate,6.48
+Muskmelon,4,389,26,10,Ammonium Sulfate,6.97
+Muskmelon,4,372,26,10,Ammonium Sulfate,6.48
+Muskmelon,4,384,26,10,Ammonium Sulfate,6.5
+Muskmelon,4,389,26,10,Ammonium Sulfate,6.51
+Muskmelon,4,377,26,10,Ammonium Sulfate,6.68
+Okra,2,355,24,9,Compost,6.56
+Okra,2,362,24,9,Compost,6.34
+Okra,2,375,24,9,Compost,6.46
+Okra,2,386,24,9,Compost,6.31
+Okra,2,374,24,9,Compost,6.4
+Ginger,4,345,22,2,NPK (15-15-15),6.6
+Ginger,4,331,22,2,NPK (15-15-15),6.61
+Ginger,4,342,22,2,NPK (15-15-15),6.55
+Ginger,4,363,22,2,NPK (15-15-15),6.98
+Ginger,4,355,22,2,NPK (15-15-15),6.84
+Turmeric,4,323,20,4,DAP (Diammonium Phosphate),6.66
+Turmeric,4,330,20,4,DAP (Diammonium Phosphate),6.65
+Turmeric,4,349,20,4,DAP (Diammonium Phosphate),6.77
+Turmeric,4,358,20,4,DAP (Diammonium Phosphate),6.68
+Turmeric,4,334,20,4,DAP (Diammonium Phosphate),6.56
+Coriander,5,323,18,3,Gypsum,6.46
+Coriander,5,340,18,3,Gypsum,6.36
+Coriander,5,328,18,3,Gypsum,6.62
+Coriander,5,329,18,3,Gypsum,6.74
+Coriander,5,311,18,3,Gypsum,6.38
+Fenugreek,5,324,16,7,Organic Manure,6.63
+Fenugreek,5,302,16,7,Organic Manure,7.04
+Fenugreek,5,316,16,7,Organic Manure,6.48
+Fenugreek,5,306,16,7,Organic Manure,6.59
+Fenugreek,5,301,16,7,Organic Manure,6.47
+Cucumber,5,303,14,0,Organic Manure,7.01
+Cucumber,5,313,14,0,Organic Manure,6.9
+Cucumber,5,327,14,0,Organic Manure,6.9
+Cucumber,5,304,14,0,Organic Manure,6.92
+Cucumber,5,311,14,0,Organic Manure,7.02
+Apple,0,981,110,8,MOP (Muriate of Potash),6.57
+Apple,0,984,110,8,MOP (Muriate of Potash),6.43
+Apple,0,996,110,8,MOP (Muriate of Potash),6.33
+Apple,0,990,110,8,MOP (Muriate of Potash),6.41
+Apple,0,992,110,8,MOP (Muriate of Potash),6.39
+Pear,0,966,100,6,Boron,6.71
+Pear,0,944,100,6,Boron,7.05
+Pear,0,933,100,6,Boron,7.03
+Pear,0,959,100,6,Boron,6.83
+Pear,0,952,100,6,Boron,6.51
+Peach,0,900,90,5,Urea,6.75
+Peach,0,892,90,5,Urea,6.48
+Peach,0,906,90,5,Urea,6.71
+Peach,0,881,90,5,Urea,7.02
+Peach,0,917,90,5,Urea,6.86
+Plum,0,843,80,1,Superphosphate,6.47
+Plum,0,850,80,1,Superphosphate,6.91
+Plum,0,869,80,1,Superphosphate,6.5
+Plum,0,844,80,1,Superphosphate,6.73
+Plum,0,859,80,1,Superphosphate,6.56
+Black Gram,4,487,25,11,Compost,6.48
+Black Gram,4,493,25,11,Compost,6.35
+Black Gram,4,515,25,11,Compost,6.48
+Black Gram,4,509,25,11,Compost,6.36
+Black Gram,4,487,25,11,Compost,6.74
+Green Gram,5,439,20,10,Potassium Sulfate,6.79
+Green Gram,5,464,20,10,Potassium Sulfate,6.49
+Green Gram,5,467,20,10,Potassium Sulfate,6.99
+Green Gram,5,430,20,10,Potassium Sulfate,6.85
+Green Gram,5,443,20,10,Potassium Sulfate,6.86
+Sesame,4,418,15,9,NPK (15-15-15),6.78
+Sesame,4,386,15,9,NPK (15-15-15),6.38
+Sesame,4,393,15,9,NPK (15-15-15),6.26
+Sesame,4,407,15,9,NPK (15-15-15),6.28
+Sesame,4,395,15,9,NPK (15-15-15),6.45
+Jute,5,353,12,2,Calcium Nitrate,6.43
+Jute,5,341,12,2,Calcium Nitrate,6.38
+Jute,5,348,12,2,Calcium Nitrate,6.55
+Jute,5,332,12,2,Calcium Nitrate,6.43
+Jute,5,360,12,2,Calcium Nitrate,6.34
+Sunflower,4,281,10,4,Iron Chelate,6.88
+Sunflower,4,310,10,4,Iron Chelate,6.81
+Sunflower,4,292,10,4,Iron Chelate,6.8
+Sunflower,4,317,10,4,Iron Chelate,6.58
+Sunflower,4,293,10,4,Iron Chelate,6.52
+Linseed,4,239,8,3,Epsom Salt (Magnesium Sulfate),6.7
+Linseed,4,252,8,3,Epsom Salt (Magnesium Sulfate),6.54
+Linseed,4,256,8,3,Epsom Salt (Magnesium Sulfate),6.82
+Linseed,4,244,8,3,Epsom Salt (Magnesium Sulfate),6.53
+Linseed,4,257,8,3,Epsom Salt (Magnesium Sulfate),6.69
