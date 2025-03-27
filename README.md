@@ -33,7 +33,7 @@ Clone the repository:
 
 
   ```sh
-git clone https://github.com/yourusername/smart-crop-advisory.git
+git clone https://github.com/Rohan-Dedhia/Crop-Advisory-System
 
 cd smart-crop-advisory
 ``` 
