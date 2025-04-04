@@ -25,7 +25,7 @@ Backend: Flask (Python)
 
 Database: CSV dataset containing soil, crop, and fertilizer information
 
-Hosting: 
+Hosting: https://gsezbpjddmfthupaksctxw.on.drv.tw/www.cropsystem.com/
 
 ### **📦 Installation & Usage**
 
